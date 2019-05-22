@@ -1,0 +1,16 @@
+.MediaPlayer-container {
+    background-color: white;
+    /*background-image: linear-gradient(to right, purple ,pink,  blue);*/
+    color: black;
+    padding: 20px;
+
+    
+}
+
+
+.MediaPlayer-control {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+

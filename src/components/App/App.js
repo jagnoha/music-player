@@ -3,6 +3,8 @@ import './App.css';
 import MediaQuery from 'react-responsive';
 import SongList from '../SongList/SongList.js';
 import SearchBar from '../SearchBar/SearchBar.js';
+import MediaPlayer from '../MediaPlayer/MediaPlayer';
+import { FaSpinner, FaSpin } from 'react-icons/fa';
 
 
 
@@ -21,10 +23,17 @@ class App extends Component {
     })
   }
 
+  setSelectedSong = (id) => {
+    this.setState({
+      selectedSong: id,
+    })
+  }
+
   searchByTerm = () => {
 
     this.setState({
       processingSearch: true,
+
     })
 
     fetch(`https://itunes.apple.com/search?term=${this.state.termSearch.replace(" ", "+")}&
@@ -33,12 +42,14 @@ class App extends Component {
     .then(json => {
       this.setState({
         resultListSong: json,
+        selectedSong: null,
         processingSearch: false,
       })
     })
     .catch(error => {
       this.setState({
         resultListSong: {"resultCount":0, "results": []},
+        selectedSong: null,
         processingSearch: false,
       })
     })
@@ -60,7 +71,27 @@ class App extends Component {
                 searchByTerm = {this.searchByTerm}
               />
             </div>
-            <SongList resultListSong = {this.state.resultListSong} />
+            
+            { !this.state.processingSearch ?
+            <SongList 
+              resultListSong = {this.state.resultListSong} 
+              setSelectedSong = {this.setSelectedSong} 
+              selectedSong = {this.state.selectedSong}
+             /> :
+             <div className="icon">
+                <FaSpinner className="rotate-icon" size="30px" />
+              </div>
+            }
+
+            { this.state.selectedSong !== null &&
+             <div className="fixed-footer">
+                <MediaPlayer />
+             </div>
+            }
+            
+            
+
+              
             
             
           </MediaQuery>

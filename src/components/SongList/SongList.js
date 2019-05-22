@@ -18,6 +18,8 @@ class SongList extends Component {
                 trackName = {item.trackName}
                 albumName = {item.collectionName}
                 artworkUrl100 = {item.artworkUrl100}
+                setSelectedSong = {this.props.setSelectedSong}
+                selectedSong = {this.props.selectedSong}
               /> 
               
             )
