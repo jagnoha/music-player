@@ -1,24 +1,25 @@
 import React, {Component} from 'react';
 import './MediaPlayer.css';
-import { FaPlay, FaStop } from 'react-icons/fa';
+import { FaPlay, FaStop, FaPause } from 'react-icons/fa';
 
 class MediaPlayer extends Component {
 
-  handleSubmit = (e) => {
-    this.props.searchByTerm();
-    console.log(e)
-    e.preventDefault();
+  onClickPause = () => {
+    this.props.pauseSong()
   }
   
+  onClickPlay = () => {
+    this.props.playSong();    
+  }
+
   render() {
 
     return (
-      <div className="MediaPlayer-container">
-       
+      <div className="MediaPlayer-container">       
        
         
-          <FaStop size="25px" className="MediaPlayer-control" />
-          <FaPlay size="25px" className="MediaPlayer-control" /> 
+          <FaPause size="25px" className="MediaPlayer-control" onClick = {this.onClickPause}/>
+          <FaPlay size="25px" className="MediaPlayer-control" onClick = {this.onClickPlay} /> 
       </div>
   );
 

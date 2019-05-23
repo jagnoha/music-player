@@ -1,18 +1,23 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to bottom right, #282c34 ,black);
 }
 
-.App-header {
+.header {
   background-image: linear-gradient(to bottom right, #282c34 ,black);
-  /*background-color: #282c34;*/
+}
+
+/*.App-header {
+  background-image: linear-gradient(to bottom right, #282c34 ,black);
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+}*/
 
 .App-link {
   color: #61dafb;
@@ -20,6 +25,13 @@
 
 
 .fixed-header {
+  width: 100%;
+  position: fixed;
+  background-color: white;       
+  top: 0;
+}
+
+.desktop-header {
   width: 100%;
   position: fixed;
   background-color: white;       
@@ -35,7 +47,7 @@
   bottom: 0;
 }
 
-.icon {
+/*.icon {
   transform: rotate(360deg);
   transition: 300ms transform;
 }
@@ -43,6 +55,12 @@
 .icon.selected {
   animation: spin 300ms;
   transform: rotate(180deg);
+}*/
+
+.spinner {
+  /*display: flex;*/
+  text-align: center;
+  padding-top: 200px;
 }
 
 @keyframes spin {
@@ -54,6 +72,18 @@
       transform: rotate(180deg);
   }
 }
+
+.desktop-container {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, #282c34 ,black);
+} 
+
+.mobile-container {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom right, #282c34 ,black);
+} 
 
 
 

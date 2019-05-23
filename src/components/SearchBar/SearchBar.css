@@ -1,5 +1,4 @@
 .SearchBar-container {
-    /*background-color: #F5F5F5;*/
     background-image: linear-gradient(to right, purple ,pink,  blue);
     color: black;
     padding: 20px;
@@ -9,19 +8,14 @@
 
 
 input[type=text] {
-  /*background-color: white;*/
   background-image: url('../../assets/searchicon.png');
   background-position: 10px 3px; 
   background-repeat: no-repeat;
   padding-left: 40px;
   padding-top: 5px;
-  padding-bottom: 5px;
-  /*border-color: black;*/
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  
+  padding-bottom: 5px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
   border-width: 0;
-
   font-size: 20px;
   border-radius: 25px;
 }

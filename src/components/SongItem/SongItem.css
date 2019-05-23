@@ -1,15 +1,9 @@
  
 .SongItem-container {
-    /*padding-top: 10vh;
-    background-color: #282c34;
-    min-height: 100vh;*/
     display: flex;
     flex-direction: row;
     text-align: left;    
     padding: 15px;
-    
-    /*font-size: calc(10px + 2vmin);*/
-    /*color: white;*/
     border-bottom-style: solid;
     border-bottom-color: #474747;
     border-bottom-width: 1px; 
@@ -23,7 +17,7 @@
     border-bottom-style: solid;
     border-bottom-color: #474747;
     border-bottom-width: 1px; 
-    background-color: rgb(43, 43, 43);
+    background-color: rgb(51, 51, 51);
     box-shadow: 0 4px 8px 0 rgba(54, 54, 54, 0.2), 0 6px 20px 0 rgba(54, 54, 54, 0.19);
   }
 
@@ -65,4 +59,21 @@
     align-items: center;
   }
   
+  .SongItem-playing {
+    /*display: flex;
+    flex-direction: column;*/
+
+    display: flex;
+    height: 40px;
+    width: 100px;
+    justify-content: flex-end; 
+    align-items: center;
+
+
+    /*justify-content: center;
+    align-items: center;*/
+  }
   
+  .SongItem-info {
+    padding-left: 2vh;
+  }
