@@ -118,7 +118,7 @@ class App extends Component {
     return (
       <div className="App">
 
-      <header>
+      
         
         
 
@@ -194,7 +194,7 @@ class App extends Component {
           
           
           </MediaQuery>
-      </header>
+
         
       </div>
   );
